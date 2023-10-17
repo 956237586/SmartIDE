@@ -50,12 +50,9 @@ cp "$IDE_RUN_FILE_NAME.sh" "$IDE_RUN_FILE_NAME-projector.sh"
 # classpath "$CLASSPATH"
 # to
 # classpath "$CLASSPATH:$IDE_HOME/projector-server/lib/*"
-sed -i 's+classpath "$CLASSPATH"+classpath "$CLASSPATH:$IDE_HOME/projector-server/lib/*"+g' "$IDE_RUN_FILE_NAME-projector.sh"
-
-# change
-# classpath "$CLASS_PATH"
-# to
-# classpath "$CLASS_PATH:$IDE_HOME/projector-server/lib/*"
+# for ideaIC-2021.2.3.tar.gz
+# sed -i 's+classpath "$CLASSPATH"+classpath "$CLASSPATH:$IDE_HOME/projector-server/lib/*"+g' "$IDE_RUN_FILE_NAME-projector.sh"
+# for ideaIC-2023.1.tar.gz
 sed -i 's+classpath "$CLASS_PATH"+classpath "$CLASS_PATH:$IDE_HOME/projector-server/lib/*"+g' "$IDE_RUN_FILE_NAME-projector.sh"
 
 
